@@ -40,7 +40,7 @@ jobs:
         name: my-trained-pipeline
         path: movie_review_model/trained_models
     - name: Install dependencies
-      run: pip install -r movie_review_api/requirements.txt
+      run: pip install -r requirement/requirements.txt
     - name: Test with pytest
       run: pytest
         
@@ -90,12 +90,12 @@ jobs:
     - name: Build the Docker image for Fastapi app
       env:
         DOCKER_USER: ${{ secrets.DOCKERHUB_USERNAME }}
-      run: docker build . -f Dockerfile -t $DOCKER_USER/movie-review-fastapi:latest
+      run: docker build . -f Dockerfile -t $DOCKER_USER/bikeshare-fastapi:latest
 
     - name: Push the Docker Image
       env:
         DOCKER_USER: ${{ secrets.DOCKERHUB_USERNAME }}
-      run: docker push $DOCKER_USER/movie-review-fastapi
+      run: docker push $DOCKER_USER/bikeshare-fastapi
 
     - name: Logout to Docker hub
       run: docker logout
