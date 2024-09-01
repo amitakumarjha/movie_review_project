@@ -5,7 +5,7 @@ FROM python:3.12
 ADD . .
 
 # specify working directory
-WORKDIR /app
+WORKDIR /movie_review_api
 
 # update pip
 RUN pip install --upgrade pip
