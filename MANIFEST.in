@@ -1,0 +1,15 @@
+include *.txt
+include *.md
+include *.pkl
+recursive-include ./movie_review_model *
+
+include movie_review_model/dataset/aclImdb/*
+include movie_review_model/trained_models/*.pkl
+include movie_review_model/VERSION
+
+include ./requirement/requirements.txt
+exclude *.log
+exclude *.cfg
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]

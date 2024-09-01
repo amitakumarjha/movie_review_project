@@ -1,0 +1,5 @@
+# Package Overview
+package_name: movie_review_model
+
+pipeline_name: movie_review_model
+pipeline_save_file: movie_review_model_output_v

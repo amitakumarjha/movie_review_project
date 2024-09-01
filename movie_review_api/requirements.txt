@@ -1,0 +1,9 @@
+uvicorn
+fastapi
+pydantic
+requests
+pytest
+pydantic-settings
+
+# Whl file for ML model dependencies
+movie_review_model-0.0.1-py3-none-any.whl
